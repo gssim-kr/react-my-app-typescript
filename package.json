@@ -23,6 +23,16 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -43,7 +53,10 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.21",
+    "husky": "^7.0.4",
     "jest-styled-components": "^7.0.8",
-    "jest-watch-typeahead": "^0.6.5"
+    "jest-watch-typeahead": "^0.6.5",
+    "lint-staged": "^12.3.0",
+    "prettier": "^2.5.1"
   }
 }
